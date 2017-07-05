@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.slider {
+  width: 800px;
+  height: 350px;
+  margin: 30px auto 0;
+  position: relative;
+}
+
+.slider .items {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider .item {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.slider .item.active {
+  opacity: 1;
+}
+
+.slider .item img {
+  height: 100%;
+  width: 100%;
+}
+
+.slider .item.active {
+  opacity: 1;
+}
+
+.slider .controls {
+  background-color: rgba(0, 0, 0, .5);
+  padding: 10px 15px;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 95%;
+}
+
+.slider .controls .nav {
+  display: inline-block;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+.slider .controls .nav span {
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  background-color: black;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+}
+.slider .controls .nav span:before {
+  display: inline-block;
+  color: white;
+}
+.slider .controls .prev:before {
+  content: '<<';
+  
+}
+.slider .controls .next:before {
+  content: '>>';
+  
+}
+.slider .controls .caption {
+  color: white;
+  display: inline-block;
+  max-width: 360px;
+  vertical-align: middle;
+  font-size: 24px;
+}
+.slider .controls .button {
+  cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
+  top: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  float: right;
+  padding: 10px 20px;
+  border: none;
+  outline: 0;
+  border-radius: 3px;
+  background: rgb(252,234,187);
+  background: -moz-linear-gradient(top, rgba(252,234,187,1) 0%, rgba(252,205,77,1) 50%, rgba(248,181,0,1) 51%, rgba(251,223,147,1) 100%);
+  background: -webkit-linear-gradient(top, rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); 
+  background: linear-gradient(to bottom, rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); 
+} 
+.slider .controls .button .label {
+  display: inline-block;
+  position: relative;
+  background: white;
+  mix-blend-mode: multiply;
+  text-shadow: 1px 1px 1px #ffc62b;
+}
+.slider .controls .button .label:before {
+  content: '';
+  mix-blend-mode: screen;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: -webkit-linear-gradient(to top, #722e00, #310000);
+  background: linear-gradient(to top, #722e00, #310000);
+  pointer-events: none;
+}
